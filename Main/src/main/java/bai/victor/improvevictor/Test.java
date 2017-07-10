@@ -1,0 +1,12 @@
+package bai.victor.improvevictor;
+
+/**
+ * Created by GG on 2017/7/5.
+ */
+
+public class Test {
+    public static void main(String[] args){
+        System.out.println(Integer.MAX_VALUE);
+    }
+
+}
