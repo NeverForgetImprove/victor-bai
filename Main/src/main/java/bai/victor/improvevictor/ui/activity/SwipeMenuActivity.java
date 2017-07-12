@@ -3,6 +3,9 @@ package bai.victor.improvevictor.ui.activity;
 import android.support.v7.widget.LinearLayoutManager;
 
 import bai.victor.improvevictor.R;
+import bai.victor.improvevictor.adapter.SwipeMenuAdapter;
+import bai.victor.improvevictor.bean.DataFactory;
+import bai.victor.improvevictor.bean.SwipeMenuBean;
 import bai.victor.module.SwipeRecyclerView;
 
 /**
@@ -23,5 +26,7 @@ public class SwipeMenuActivity extends BaseActivity{
         mSwipeRecyclerView = (SwipeRecyclerView) findViewById(R.id.swipe_recyclerview);
         mSwipeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        SwipeMenuAdapter adapter = new SwipeMenuAdapter(this, DataFactory.createListData(SwipeMenuBean.class));
+        mSwipeRecyclerView.setAdapter(adapter);
     }
 }

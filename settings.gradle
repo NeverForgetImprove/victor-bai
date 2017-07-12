@@ -1,3 +1,4 @@
 include ':Modules:SlideMenu'
+include ':Modules:Utils'
 
 include ':Main'

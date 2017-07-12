@@ -15,7 +15,7 @@ import android.view.ViewConfiguration;
 public class SwipeRecyclerView extends RecyclerView {
     private SwipeMenuLayout mLastMenuLayout;
     private int mLastTouchPosition;
-    private int mScaleToucheSlop;
+    protected int mScaleTouchSlop;
 
     public SwipeRecyclerView(Context context) {
         this(context, null);
@@ -27,7 +27,7 @@ public class SwipeRecyclerView extends RecyclerView {
 
     public SwipeRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mScaleToucheSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+        mScaleTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
     }
 
     private int mLastX, mLastY;
@@ -72,8 +72,8 @@ public class SwipeRecyclerView extends RecyclerView {
             case MotionEvent.ACTION_CANCEL:
                 int dx = (int) (mDownX - e.getX());
                 int dy = (int) (mDownY - e.getY());
-                if (Math.abs(dx) > mScaleToucheSlop && Math.abs(dx) > Math.abs(dy) ||
-                        ((mLastMenuLayout != null) && mLastMenuLayout.mCurrentState != SwipeMenuLayout.STATE_CLOSED) ){
+                if (Math.abs(dx) > mScaleTouchSlop && Math.abs(dx) > Math.abs(dy) ||
+                        (mLastMenuLayout != null && mLastMenuLayout.mCurrentState != SwipeMenuLayout.STATE_CLOSED) ){
                     // if offset-X more than offset-Y or the last menu is opened,forbid the RecyclerView's slid
                     return false;
                 }

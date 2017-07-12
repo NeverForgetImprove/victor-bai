@@ -149,7 +149,7 @@ public class SwipeMenuLayout extends LinearLayout{
      * @return true if menu is closed
      */
     public boolean isMenuClosed(){
-        return getScaleX() <= 0;
+        return getScrollX() <= 0;
     }
 
     public void smoothToCloseMenu(){

@@ -1,20 +1,32 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "bai.victor.improvevictor"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        buildConfigField "boolean", "IS_SHOW_LOG", "false"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
+            buildConfigField "boolean", "IS_SHOW_LOG", NOT_SHOW_LOG
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false
+            buildConfigField "boolean", "IS_SHOW_LOG", SHOW_LOG
+        }
+        preview{
+            minifyEnabled false
+            buildConfigField "boolean", "IS_SHOW_LOG", SHOW_LOG
         }
     }
 }
