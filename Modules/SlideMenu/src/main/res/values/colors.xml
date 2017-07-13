@@ -8,4 +8,8 @@
     <color name="gray_holo_light">#ffd0d0d0</color>
     <color name="yellow">#c0ffbd21</color>
     <color name="red_f">#ff3c00</color>
+    <color name="drak_blue">#6666aa</color>
+    <color name="gray">#e2e2e2</color>
+    <color name="red_deep">#ea2226</color>
+    <color name="orange_salmon">#EC5745</color>
 </resources>
