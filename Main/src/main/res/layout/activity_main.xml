@@ -23,4 +23,13 @@
         android:onClick="onClick"
         />
 
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="从H5链接跳转App时传递的数据显示"/>
+
 </LinearLayout>

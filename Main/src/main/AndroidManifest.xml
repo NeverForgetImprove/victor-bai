@@ -18,7 +18,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!--识别类似于 victor://data/www.baidu.com/ 的链接，可直接跳转-->
+                <data
+                    android:host="data"
+                    android:scheme="victor"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.activity.SwipeMenuActivity"
             android:screenOrientation="portrait"/>
     </application>
