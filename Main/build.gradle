@@ -12,6 +12,14 @@ android {
 
         buildConfigField "boolean", "IS_SHOW_LOG", "false"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        jackOptions{
+            enabled true
+        }
+        compileOptions{
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
     }
 
     buildTypes {
