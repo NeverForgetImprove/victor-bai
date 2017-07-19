@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">白亚豪</string>
+    <string name="bai">白</string>
+    <string name="ya">亚</string>
+    <string name="hao">豪</string>
+    <string name="others">其他</string>
+
+    <string name="copyright"><u>——  请问小白</u></string>
+    <string name="swipe_title">侧滑菜单</string>
+</resources>

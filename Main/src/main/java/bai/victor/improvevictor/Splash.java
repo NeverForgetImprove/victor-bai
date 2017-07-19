@@ -19,7 +19,7 @@ public class Splash extends AppCompatActivity {
     private TextView mCopryright;
     private TextView mTimer;
 
-    private int time = 5;
+    private int time = 3;
     private Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +32,13 @@ public class Splash extends AppCompatActivity {
     private Runnable timerRunnable = new Runnable() {
         @Override
         public void run() {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    mTimer.setText("跳过（"+ time-- +"）");
-                    SystemClock.sleep(1000);
-                }
+            runOnUiThread(() -> {
+                mTimer.setText("跳过（"+ time-- +"）");
             });
             if (time < 0){
                 enterMainActivity();
             }else {
-                handler.post(this);
+                handler.postDelayed(this, 1000);
             }
         }
     };

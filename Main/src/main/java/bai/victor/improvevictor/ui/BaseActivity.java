@@ -1,4 +1,4 @@
-package bai.victor.improvevictor.ui.activity;
+package bai.victor.improvevictor.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -34,15 +34,27 @@ public class BaseActivity extends AppCompatActivity{
     protected void initEvents() {
     }
 
-    public void initToolBar(Toolbar toolbar, String title, boolean showHomeAsUp){
-        initToolBar(toolbar, title, showHomeAsUp, false);
+    public void initToolBar(String title){
+        initToolBar(title, false);
+    }
+
+    public void initToolBar(String title, boolean showHomeAsUp){
+        initToolBar(null, title, showHomeAsUp, false);
     }
 
     public void initToolBar(Toolbar toolbar, String title, boolean showHomeAsUp, boolean isShowRight){
+        if (toolbar == null){
+            toolbar= (Toolbar) findViewById(R.id.tool_bar);
+        }
         this.isShowRight = isShowRight;
         toolbar.setTitle(title);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(showHomeAsUp);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(showHomeAsUp);// 左上角的一个返回图标
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+    }
+
+    public void updateTitle(String title){
+        getSupportActionBar().setTitle(title);
     }
 
     @Override

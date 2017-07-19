@@ -9,18 +9,18 @@
         android:id="@+id/my_navigation_1"
         android:checkable="false"
         android:enabled="true"
-        android:title="PopupWindow" />
+        android:title="白、" />
     <item
         android:id="@+id/my_navigation_2"
         android:checkable="false"
         android:enabled="true"
-        android:title="多进程通信" />
+        android:title="亚、" />
 
     <item
         android:id="@+id/my_navigation_3"
         android:checkable="false"
         android:enabled="true"
-        android:title="RecycleView系列" />
+        android:title="豪、" />
     <item
         android:id="@+id/my_navigation_4"
         android:checkable="false"

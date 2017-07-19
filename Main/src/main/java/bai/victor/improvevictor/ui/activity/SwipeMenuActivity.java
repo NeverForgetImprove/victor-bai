@@ -6,13 +6,14 @@ import bai.victor.improvevictor.R;
 import bai.victor.improvevictor.adapter.SwipeMenuAdapter;
 import bai.victor.improvevictor.bean.DataFactory;
 import bai.victor.improvevictor.bean.SwipeMenuBean;
+import bai.victor.improvevictor.ui.BaseActivity;
 import bai.victor.module.SwipeRecyclerView;
 
 /**
  * Created by Victor-Bai on 2017/7/10.
  */
 
-public class SwipeMenuActivity extends BaseActivity{
+public class SwipeMenuActivity extends BaseActivity {
 
     SwipeRecyclerView mSwipeRecyclerView;
 
@@ -23,6 +24,7 @@ public class SwipeMenuActivity extends BaseActivity{
 
     @Override
     protected void initViews() {
+        initToolBar(getString(R.string.swipe_title));
         mSwipeRecyclerView = (SwipeRecyclerView) findViewById(R.id.swipe_recyclerview);
         mSwipeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

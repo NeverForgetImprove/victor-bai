@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_selector"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="SwipeMenu"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            />
+
+        <TextView
+            android:id="@+id/jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="从H5链接跳转App时传递的数据显示"/>
+</LinearLayout>
